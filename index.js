@@ -6,11 +6,13 @@
  
 // let userChoice = prompt("What is your choice?: ");
 let choice = prompt("What do you choose?: ");
+
 function playerChoice() {
     return choice.toLocaleLowerCase();
 }
+
 let player = playerChoice();
-console.log(player);
+
 const choices= ['rock','paper','sissors'];
 
 function getComputerChoice() {
@@ -19,4 +21,17 @@ function getComputerChoice() {
 
 let computer = getComputerChoice();
 
+function playRound (player, computer) {
+    if (player === "rock" && computer === "rock") {
+        console.log("Its a draw");
+    } else if (player === "rock" && computer === "paper") {
+        console.log("Computer has won");
+    } else if (player === "rock" && computer === "sissors") {
+        console.log("You have won");
+    } else if (palyer === "paper" && computer === "paper") {
+        console.log("Its a draw");
+    } 
+}
+
+;
 
