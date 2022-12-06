@@ -5,3 +5,10 @@
 // First one to win 3 rounds is a winner
  
 // let userChoice = prompt("What is your choice?: ");
+
+const options = ["rock", "paper", "sissors"];
+
+function getComputerChoice (list) {
+    return options[Math.floor(Math.random() * options.length)];
+}
+console.log(getComputerChoice(options));
