@@ -26,15 +26,23 @@ function playRound (player, computer) {
        (player === "paper" && computer === "rock")  ||
        (player === "sissors" && computer === "paper") {
         console.log("You won");
-       }
+       } else if (player === "rock" && computer === "paper") ||
+        (player === "paper" && computer === "sissors") ||
+        (player === "sissors" && computer === "rock") {
+            console.log("Computer won");
+        } else if (player === "rock" && computer === "rock") ||
+         (player === "paper" && computer === "paper") ||
+         (player === "sissors" && computer === "sissors") {
+            console.log("Draw");
+         }
 }
     
 
 const round = playRound(player, computer);
 
-function game(playRound) {
+function game(round) {
     for (let i=0; i<5; i++) {
-        if (playRound === "Its a draw")
+        if (round === "Draw")
     }
 }
 
