@@ -22,28 +22,20 @@ function getComputerChoice() {
 let computer = getComputerChoice();
 
 function playRound (player, computer) {
-    if (player === "rock" && computer === "rock") {
-        console.log("Its a draw");
-    } else if (player === "rock" && computer === "paper") {
-        console.log("Computer has won");
-    } else if (player === "rock" && computer === "sissors") {
-        console.log("You have won");
-    } else if (player === "paper" && computer === "paper") {
-        console.log("Its a draw");
-    } else if (player === "paper" && computer === "sissors") {
-        console.log("Computer has won");
-    } else if (player === "paper" && computer === "rock") {
-        console.log("You have won");
-    } else if (player === "sissors" && computer === "sissors") {
-        console.log("Its a draw");
-    } else if (player === "sissors" && computer === "rock") {
-        console.log("Computer has won");
-    } else if (player === "sissors" && computer === "paper") {
-        console.log("You have won");
-    }
+    if (player === "rock" && computer === "sissors") || 
+       (player === "paper" && computer === "rock")  ||
+       (player === "sissors" && computer === "paper") {
+        console.log("You won");
+       }
 }
+    
 
 const round = playRound(player, computer);
-console.log(round);
+
+function game(playRound) {
+    for (let i=0; i<5; i++) {
+        if (playRound === "Its a draw")
+    }
+}
 
 
