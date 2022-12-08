@@ -14,11 +14,26 @@ function getComputerChoice () {
     return options[Math.floor(Math.random() * options.length)];
 }
 
+function getPlayerChoice() {
+    let validation = false;
+    while (validation == false) {
+        const choice = prompt("What is your choice?");
+        if (choice == null) {
+            continue;
+        }
+        const choiceInLower = choice.toLocaleLowerCase();
+        if (options.includes(choiceInLower)) {
+            validation = true;
+            return choiceInLower;
+        }
+    }
+}
+
 // create a function to play a single round of RPS and consloe.log a winer
 // call on two arguments player and computer
 
 function round(player, computer) {
-    let playerSelection = ;
+    let playerSelection = getPlayerChoice();
     let computerSelection = getComputerChoice();
     if ((playerSelection == "rock" && computerSelection == "sissors") ||
        (playerSelection == "paper" && computerSelection == "rock") || 
@@ -37,4 +52,3 @@ function round(player, computer) {
             return "Its a tie;"
         }
 }
-
