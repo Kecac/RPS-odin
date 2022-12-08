@@ -6,9 +6,12 @@
  
 // let userChoice = prompt("What is your choice?: ");
 
+// create a function for getting a computer choice
+
 const options = ["rock", "paper", "sissors"];
 
-function getComputerChoice (list) {
+function getComputerChoice () {
     return options[Math.floor(Math.random() * options.length)];
 }
-console.log(getComputerChoice(options));
+
+console.log(getComputerChoice());
