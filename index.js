@@ -14,6 +14,9 @@ function getComputerChoice () {
     return options[Math.floor(Math.random() * options.length)];
 }
 
+// Get input from a user, validated that the input is included in the given
+// options and return the users input 
+
 function getPlayerChoice() {
     let validation = false;
     while (validation == false) {
