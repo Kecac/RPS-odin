@@ -14,4 +14,27 @@ function getComputerChoice () {
     return options[Math.floor(Math.random() * options.length)];
 }
 
-console.log(getComputerChoice());
+// create a function to play a single round of RPS and consloe.log a winer
+// call on two arguments player and computer
+
+function round(player, computer) {
+    let playerSelection = ;
+    let computerSelection = getComputerChoice();
+    if ((playerSelection == "rock" && computerSelection == "sissors") ||
+       (playerSelection == "paper" && computerSelection == "rock") || 
+       (playerSelection == "sissors" && computerSelection == "paper")) {
+        return `Player has won, ${playerSelection} beats ${computerSelection}.`;
+       } 
+       else if (
+        (playerSelection == "rock" && computerSelection == "paper") ||
+        (playerSelection == "paper" && computerSelection == "sissors") ||
+        (playerSelection == "sissors" && computerSelection == "rock")) {
+            return `Computer has won, ${computerSelection} beats ${playerSelection}`;
+        } 
+        else if (
+            (playerSelection == computerSelection) 
+        ) {
+            return "Its a tie;"
+        }
+}
+
